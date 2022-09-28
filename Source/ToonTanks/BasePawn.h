@@ -40,8 +40,19 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category="Combat")
 	TSubclassOf<class AProjectile> ProjectileClass;
 
+
 public:	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Firing")
 	int32 ProjectileFireSpeed {300};
+
+	UPROPERTY(EditAnywhere, Category="Combat")
+	class UParticleSystem* DeathParticles;
+
+	UPROPERTY(EditAnywhere, Category="Combat")
+	class USoundBase* DeathSound;
+
+	UPROPERTY(EditAnywhere, Category="Combat")
+	TSubclassOf<class UCameraShakeBase> DeathCameraShakeClass;
+
 
 };
